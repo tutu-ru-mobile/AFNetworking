@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
   s.source   = { :git => 'git@github.com:tutu-ru-mobile/AFNetworking.git', :tag => s.version, :submodules => true }
-  s.resource_bundles = {"AFNetworking" => ["AFNetworking/PrivacyInfo.xcprivacy"]}
+  s.resource_bundles = {"AFNetworking" => ["PrivacyInfo.xcprivacy"]}
   s.requires_arc = true
   
   s.public_header_files = 'AFNetworking/AFNetworking.h'
@@ -67,8 +67,7 @@ EOS
 
     ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
     ss.public_header_files = 'AFNetworking/AF{URL,HTTP}SessionManager.h', 'AFNetworking/AFCompatibilityMacros.h'
-
-    s.resource_bundles = {"AFNetworking/NSURLSession" => ["AFNetworking/PrivacyInfo.xcprivacy"]}
+    ss.resource_bundles = {"AFNetworking" => ["PrivacyInfo.xcprivacy"]}
   end
 
   s.subspec 'UIKit' do |ss|
