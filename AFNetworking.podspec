@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
   s.source   = { :git => 'git@github.com:tutu-ru-mobile/AFNetworking.git', :tag => s.version, :submodules => true }
-  s.resource_bundles = {"AFNetworking" => ["PrivacyInfo.xcprivacy"]}
   s.requires_arc = true
   
   s.public_header_files = 'AFNetworking/AFNetworking.h'
