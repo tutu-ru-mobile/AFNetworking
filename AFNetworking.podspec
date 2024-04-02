@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
   s.source   = { :git => 'https://github.com/AFNetworking/AFNetworking.git', :tag => s.version, :submodules => true }
+  s.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
   s.requires_arc = true
   
   s.public_header_files = 'AFNetworking/AFNetworking.h'
@@ -38,14 +39,12 @@ EOS
     ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
     ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
     ss.osx.frameworks = 'CoreServices'
-    ss.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
   end
 
   s.subspec 'Security' do |ss|
     ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
     ss.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
     ss.frameworks = 'Security'
-    ss.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
   end
 
   s.subspec 'Reachability' do |ss|
@@ -55,7 +54,6 @@ EOS
 
     ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
     ss.public_header_files = 'AFNetworking/AFNetworkReachabilityManager.h'
-    ss.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
 
     ss.frameworks = 'SystemConfiguration'
   end
@@ -69,7 +67,6 @@ EOS
 
     ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
     ss.public_header_files = 'AFNetworking/AF{URL,HTTP}SessionManager.h', 'AFNetworking/AFCompatibilityMacros.h'
-    ss.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
   end
 
   s.subspec 'UIKit' do |ss|
@@ -79,6 +76,5 @@ EOS
 
     ss.public_header_files = 'UIKit+AFNetworking/*.h'
     ss.source_files = 'UIKit+AFNetworking'
-    ss.resource_bundles = {"AFNetworking" => ["Resources/PrivacyInfo.xcprivacy"]}
   end
 end
