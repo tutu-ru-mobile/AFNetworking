@@ -67,7 +67,7 @@ EOS
 
     ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
     ss.public_header_files = 'AFNetworking/AF{URL,HTTP}SessionManager.h', 'AFNetworking/AFCompatibilityMacros.h'
-    # ss.resource_bundles = {"AFNetworking" => ["PrivacyInfo.xcprivacy"]}
+    ss.resource_bundles = {"AFNetworking" => ["PrivacyInfo.xcprivacy"]}
   end
 
   s.subspec 'UIKit' do |ss|
